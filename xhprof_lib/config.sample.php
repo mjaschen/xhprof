@@ -7,6 +7,7 @@ $_xhprof['dbhost'] = 'localhost';
 $_xhprof['dbuser'] = 'root';
 $_xhprof['dbpass'] = 'password';
 $_xhprof['dbname'] = 'xhprof';
+$_xhprof['dbadapter'] = 'Pdo';
 $_xhprof['servername'] = 'myserver';
 $_xhprof['namespace'] = 'myapp';
 $_xhprof['url'] = 'http://url/to/xhprof/xhprof_html';
@@ -49,6 +50,9 @@ $controlIPs[] = "127.0.0.1";   // localhost, you'll want to add your own ip here
 $controlIPs[] = "::1";         // localhost IP v6
 
 //$otherURLS = array();
+
+// ignore builtin functions and call_user_func* during profiling
+//$ignoredFunctions = array('call_user_func', 'call_user_func_array', 'socket_select');
 
 //Default weight - can be overidden by an Apache environment variable 'xhprof_weight' for domain-specific values
 $weight = 100;
